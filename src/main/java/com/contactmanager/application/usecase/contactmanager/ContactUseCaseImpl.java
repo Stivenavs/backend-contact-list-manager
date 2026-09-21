@@ -1,4 +1,4 @@
-package com.contactmanager.application.usecase.servired;
+package com.contactmanager.application.usecase.contactmanager;
 
 import com.contactmanager.application.exceptions.ContactNotFoundException;
 import com.contactmanager.application.exceptions.DuplicateEmailException;
@@ -46,10 +46,6 @@ public class ContactUseCaseImpl implements ContactUseCase {
     public Contact update(Integer id, Contact contact) {
         Contact existing = getById(id);
         normalize(contact);
-//
-//        if (contactPort.existsByEmailAndIdNot(contact.getEmail(), id)) {
-//            throw new DuplicateEmailException(ContactManagerErrorCodes.DUPLICATE_EMAIL, contact.getEmail());
-//        }
 
         existing.setFirstName(contact.getFirstName());
         existing.setLastName(contact.getLastName());

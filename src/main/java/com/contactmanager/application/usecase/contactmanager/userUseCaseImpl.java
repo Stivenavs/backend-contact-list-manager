@@ -1,4 +1,4 @@
-package com.contactmanager.application.usecase.servired;
+package com.contactmanager.application.usecase.contactmanager;
 
 import com.contactmanager.domain.contactmanager.User;
 import com.contactmanager.infrastructure.ports.in.UserUserCase;

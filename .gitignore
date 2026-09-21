@@ -1,0 +1,75 @@
+# Build
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Maven wrapper: mantener .mvn/wrapper en el repo (no ignorar la carpeta)
+.mvn/
+!.mvn/wrapper/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# Logs y temporales
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*~
+
+
+# --- IDEs ---
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# --- Sistema operativo ---
+
+### Windows (nombres reservados y archivos de sistema)
+nul
+CON
+PRN
+AUX
+COM1
+COM2
+COM3
+COM4
+LPT1
+LPT2
+LPT3
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Otros ---
+HELP.md

@@ -1,0 +1,67 @@
+server:
+  port: 8277
+  servlet:
+    context-path: /api/v1/contact-manager
+
+spring-doc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /contact-manager/api-docs
+  api:
+    title: contact-manager
+    description: contact-manager API
+    version: 1.0
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: contact-manager-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contactmanager
+    username: postgres
+    password: Stiven.1956*
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate.default_schema: contactmanager
+      jdbc:
+        lob:
+          non_contextual_creation: false
+    generate-ddl: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  feign:
+    client:
+      config:
+        default:
+          connectTimeout: 2000
+          readTimeout: 2000
+          loggerLevel: basic
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+
+request-mapping:
+  controller:
+    auth: auth
+    users: users
+
+
+log4j:
+  configurationFile: log4j2-spring.xml, log4j2-env.xml
+
+management:
+  endpoints.web.exposure.include: '*'
+  prometheus.metrics.export.enabled: true
+
+security:
+  secrets:
+    key: contactmanager-by-2026-for-stiven-restrepo-ramirez
